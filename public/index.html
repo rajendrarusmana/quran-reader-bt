@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juz Amma Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/landscape-verse-style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overscroll-behavior-y: contain; /* Prevents pull-to-refresh issues */
+        }
+
+        #root {
+            width: 100%;
+            max-width: 600px; /* Max width for larger screens */
+            min-height: 100vh; /* Full height on mobile */
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3ab674;
+            padding-bottom: 10px;
+        }
+
+        .surah-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .surah-list-item {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 1.2em;
+        }
+
+        .surah-list-item:hover {
+            background-color: #d2d6d8;
+            transform: translateY(-2px);
+        }
+        
+        .surah-number {
+            background-color: #3ab674;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .verse-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .surah-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #3ab674;
+            margin-bottom: 10px;
+        }
+        
+        .verse-info {
+            font-size: 1em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        /* Removed .verse-text block to avoid style conflicts; now handled in landscape-verse-style.css */
+
+        .navigation-controls {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        
+        .nav-button, .back-button {
+            background-color: #3ab674;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            min-width: 100px;
+        }
+
+        .nav-button:hover, .back-button:hover {
+            background-color: #34a167;
+        }
+        
+        .nav-button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .back-button-container {
+             margin-top: auto; /* Pushes back button to bottom in SurahList */
+             padding-top: 20px; /* Spacing for back button on verse screen */
+        }
+        
+        .footer-controls { /* For back button on verse screen */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 15px;
+            margin-top: auto; /* Pushes it to the bottom */
+        }
+
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="module" src="../src/index.js"></script>
+<script type="module" src="../src/index.tsx"></script>
+</body>
+</html>

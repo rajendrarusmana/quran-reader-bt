@@ -1,0 +1,196 @@
+/* Quran Juz Amma App Landscape-Optimized Styles */
+.landscape-optimized {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background: #f8f8f8;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+.verse-header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 0 1vh 0;
+  gap: 1em;
+}
+.verse-title-block {
+  flex: 1;
+  text-align: center;
+}
+.surah-title {
+  font-size: 2.2em;
+  margin: 0;
+  font-weight: 600;
+}
+.surah-arabic {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+.verse-info {
+  font-size: 1.1em;
+  color: #666;
+  margin: 0.2em 0 0 0;
+}
+.verse-main-row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+.verse-arabic-block {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.verse-text {
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: clamp(2em, 8vw, 4em);
+  line-height: 1.8;
+  direction: rtl;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  min-height: 100px;
+  max-height: 30vh;
+  overflow-y: auto;
+  word-break: break-word;
+  text-wrap: balance;
+}
+.verse-footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 2vh 5vw 0 5vw;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+.back-button.landscape-back {
+  font-size: 1.1em;
+  padding: 0.7em 2em;
+  border-radius: 2em;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  min-width: 120px;
+  margin: 0 1em;
+}
+.nav-button {
+  font-size: 1.1em;
+  padding: 0.7em 2em;
+  border-radius: 2em;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  min-width: 120px;
+}
+.nav-button:hover, .back-button.landscape-back:hover {
+  background: #d0d0d0;
+}
+@media (max-width: 900px) {
+  .verse-text { font-size: 2.1em; }
+  .surah-title { font-size: 1.3em; }
+  .verse-header-row { gap: 0.5em; }
+  .verse-footer-nav { gap: 1em; padding: 2vh 2vw 0 2vw; }
+}
+.verse-translation-block {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.verse-translation-text {
+  font-size: 1.5em;
+  color: #444;
+  font-family: 'Inter', 'Arial', sans-serif;
+  margin: 1.2em 0 0 0;
+  line-height: 1.5;
+  direction: ltr;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+  width: 100%;
+}
+.surah-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .surah-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.surah-list-item {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  padding: 12px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.surah-list-item:hover {
+  background-color: #d2d6d8;
+  transform: translateY(-2px);
+}
+
+.surah-number {
+  display: block;
+  background-color: #3ab674;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin: 0 auto 4px auto;
+  font-size: 0.9em;
+  width: fit-content;
+}
+
+.toast-notification {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(60, 183, 116, 0.97);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 9999;
+  max-width: 90vw;
+  text-align: center;
+}
+.toast-notification.show {
+  opacity: 1;
+}
