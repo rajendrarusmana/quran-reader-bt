@@ -1,4 +1,4 @@
-# Run and deploy your AI Studio app
+# Qur'an Reader with Bluetooth controls
 
 This contains everything you need to run your app locally.
 
