@@ -34,5 +34,5 @@ Thumbs.db
 *.local
 .docker/
 
-quran_all_surahs.json
-quran_arabic.json
+data/quran_all_surahs.json
+data/quran_arabic.json
