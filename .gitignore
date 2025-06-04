@@ -34,5 +34,8 @@ Thumbs.db
 *.local
 .docker/
 
+# Vite
+.vite/
+
 data/quran_all_surahs.json
 data/quran_arabic.json
